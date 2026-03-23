@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Nuker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <span class="title">Tab Nuker</span>
+    <span class="icon">💣</span>
+  </header>
+
+  <section class="nuke-section">
+    <button id="nuke-btn" disabled>Nuke Tabs (0)</button>
+    <p class="shortcut-hint">Or use <kbd id="shortcut-key"></kbd></p>
+  </section>
+
+  <section class="domains-section">
+    <label class="section-label">Domains</label>
+    <ul id="domain-list"></ul>
+    <div class="add-row">
+      <input id="domain-input" type="text" placeholder="example.com" autocomplete="off" spellcheck="false">
+      <button id="add-btn">Add</button>
+    </div>
+  </section>
+
+  <script src="popup.js"></script>
+</body>
+</html>

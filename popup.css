@@ -1,0 +1,231 @@
+:root {
+  --bg: #1a1a2e;
+  --surface: #16213e;
+  --border: #0f3460;
+  --accent: #e94560;
+  --accent-hover: #c73652;
+  --accent-disabled: #6b2535;
+  --text: #eaeaea;
+  --text-muted: #8892a4;
+  --add-btn: #0f3460;
+  --add-btn-hover: #1a4a8a;
+  --remove-btn: #333;
+  --remove-btn-hover: #e94560;
+  --input-bg: #0f3460;
+  --list-item-bg: #0f3460;
+  --list-item-hover: #1a4a8a;
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 320px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 14px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+/* Nuke button */
+.nuke-section {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+#nuke-btn {
+  width: 100%;
+  padding: 10px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+#nuke-btn:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+#nuke-btn:disabled {
+  background: var(--accent-disabled);
+  cursor: default;
+  opacity: 0.6;
+}
+
+#nuke-btn.confirmed {
+  background: #2a7a3b;
+}
+
+.shortcut-hint {
+  margin-top: 6px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+kbd {
+  display: inline-block;
+  padding: 1px 5px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  font-family: var(--font);
+  font-size: 11px;
+  color: var(--text);
+}
+
+/* Domains section */
+.domains-section {
+  padding: 12px 16px;
+}
+
+.section-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+#domain-list {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+#domain-list:empty::after {
+  content: 'No domains yet. Add one below.';
+  display: block;
+  padding: 10px 12px;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-style: italic;
+}
+
+#domain-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 10px;
+  background: var(--list-item-bg);
+  border-radius: 4px;
+  margin-bottom: 3px;
+  transition: background 0.1s;
+}
+
+#domain-list li:hover {
+  background: var(--list-item-hover);
+}
+
+#domain-list li:last-child {
+  margin-bottom: 0;
+}
+
+.domain-text {
+  font-size: 13px;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.remove-btn {
+  flex-shrink: 0;
+  margin-left: 8px;
+  background: var(--remove-btn);
+  color: var(--text-muted);
+  border: none;
+  border-radius: 3px;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.1s, color 0.1s;
+}
+
+.remove-btn:hover {
+  background: var(--remove-btn-hover);
+  color: #fff;
+}
+
+/* Add row */
+.add-row {
+  display: flex;
+  gap: 8px;
+}
+
+#domain-input {
+  flex: 1;
+  padding: 7px 10px;
+  background: var(--input-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font-size: 13px;
+  font-family: var(--font);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+#domain-input::placeholder {
+  color: var(--text-muted);
+}
+
+#domain-input:focus {
+  border-color: var(--accent);
+}
+
+#add-btn {
+  padding: 7px 14px;
+  background: var(--add-btn);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+#add-btn:hover {
+  background: var(--add-btn-hover);
+}
