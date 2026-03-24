@@ -2,7 +2,8 @@
   "manifest_version": 3,
   "name": "Tab Nuker",
   "version": "1.0.0",
-  "description": "Close all tabs matching domains in your hit list.",
+  "description": "Nuke every open tab from your most distracting sites in one click or one keystroke. Build a hit list, stay focused.",
+  "homepage_url": "https://github.com/elgringo2k/tabnuker",
   "permissions": ["tabs", "storage"],
   "background": {
     "service_worker": "background.js"

@@ -12,7 +12,11 @@ Tab Nuker lets you build a hit list of domains. Whenever you want to claw back y
 
 ## Installation
 
-Tab Nuker is not yet on the Chrome Web Store, so you'll load it manually:
+### Chrome Web Store *(coming soon)*
+
+Install directly from the Chrome Web Store — no developer mode needed.
+
+### Manual (sideload)
 
 1. Download or clone this repo
 2. Open Chrome and go to `chrome://extensions`
@@ -55,6 +59,17 @@ Entries match the full domain and all subdomains. For example, adding `reddit.co
 - Press `/` inside the popup to jump focus to the add-domain input
 - Press `Escape` to close the popup
 - Add domains without the `www.` — Tab Nuker handles subdomains automatically
+
+---
+
+## Publishing to the Chrome Web Store
+
+1. **One-time setup** — register as a Chrome developer at `chrome.google.com/webstore/devconsole` ($5 fee)
+2. **Package** — run `bash package.sh` to produce `tabnuker.zip`
+3. **Store listing assets** you'll need to prepare manually:
+   - At least 1 screenshot at **1280×800** or **640×400** (take one of the popup in use)
+   - Small promo tile **440×280** (shown in search results — recommended)
+4. **Submit** — in the Dashboard click **New Item**, upload the zip, fill in the listing, set the privacy policy URL to your hosted `privacy-policy.html` (e.g. via GitHub Pages), and submit for review (~1–3 business days)
 
 ---
 
