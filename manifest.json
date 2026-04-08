@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Tab Nuker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Nuke every open tab from your most distracting sites in one click or one keystroke. Build a hit list, stay focused.",
   "homepage_url": "https://github.com/elgringo2k/tabnuker",
   "permissions": ["tabs", "storage"],
@@ -19,9 +19,7 @@
   "commands": {
     "nuke-tabs": {
       "suggested_key": {
-        "mac": "Command+Shift+X",
-        "windows": "Ctrl+Shift+X",
-        "linux": "Ctrl+Shift+X"
+        "default": "Alt+Shift+X"
       },
       "description": "Nuke all tabs in the hit list"
     }

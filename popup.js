@@ -126,7 +126,7 @@ async function init() {
   });
 
   const isMac = navigator.platform.toUpperCase().includes('MAC');
-  document.getElementById('shortcut-key').textContent = isMac ? '⌘⇧X' : 'Ctrl+Shift+X';
+  document.getElementById('shortcut-key').textContent = isMac ? '⌥⇧X' : 'Alt+Shift+X';
 
   input.focus();
 }
