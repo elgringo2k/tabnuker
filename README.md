@@ -43,8 +43,8 @@ Click the 💣 toolbar icon to open the popup.
 
 | Platform | Shortcut |
 |----------|----------|
-| macOS | `⌘ Shift X` |
-| Windows / Linux | `Ctrl Shift X` |
+| macOS | `⌥ Shift X` |
+| Windows / Linux | `Alt Shift X` |
 
 > If the shortcut isn't working, visit `chrome://extensions/shortcuts` to confirm it's assigned.
 
